@@ -234,14 +234,16 @@
 
 .post-list-heading {
   @include relative-font-size(1.75);
+  text-align: center;
 }
 
 .post-list {
   margin-left: 0;
-  list-style: none;
+  padding-left: 1rem;
+  list-style: disc;
 
   > li {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 3;
   }
 }
 
@@ -251,8 +253,14 @@
 }
 
 .post-link {
-  display: block;
-  @include relative-font-size(1.5);
+
+  &,
+  &:hover,
+  &:visited {
+    color: #111;
+  }
+
+  @include relative-font-size(1.0);
 }
 
 
