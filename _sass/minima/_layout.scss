@@ -3,10 +3,15 @@
  */
 .site-header {
   min-height: $spacing-unit * 1.865;
-  margin-top: $spacing-unit / 2;
 
   // Positioning context for the mobile navigation icon
   position: relative;
+
+  .wrapper { position: relative; }
+}
+
+.header-content-wrapper {
+  margin-top: $spacing-unit / 2;
 }
 
 .site-title {
@@ -31,7 +36,6 @@
 }
 
 .site-symbol {
-
   &,
   &:visited,
   &:hover {
@@ -54,6 +58,19 @@
     @include media-query($on-palm) {
       display: none;
     }
+  }
+}
+
+#theme-toggle {
+  position: absolute;
+  top: - $spacing-unit / 2;
+  right: 60px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+
+  @include media-query($on-palm) {
+    right: 15px;
   }
 }
 
