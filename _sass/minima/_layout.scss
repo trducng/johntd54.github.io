@@ -31,9 +31,33 @@
 }
 
 .site-symbol {
-  vertical-align: middle;
+
+  &,
+  &:visited,
+  &:hover {
+    text-decoration: none;
+  }
+
+  svg {
+    vertical-align: middle;
+  }
+
+  .palm {
+    display: none;
+    @include media-query($on-palm) {
+      display: inline
+    }
+  }
+
+  .laptop {
+    display: inline;
+    @include media-query($on-palm) {
+      display: none;
+    }
+  }
 }
 
+/*
 .site-symbol.palm {
   display: none;
   @include media-query($on-palm) {
@@ -47,6 +71,7 @@
     display: none;
   }
 }
+*/
 
 .site-nav {
   float: right;
