@@ -1,0 +1,440 @@
+---
+permalink: /camtu/
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <title>Wedding Announcement</title>
+    <style>
+        body, html {
+            font-family: "Crimson Text", serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: #f0f0f0;
+            font-size: 18px;
+        }
+
+        .highlight {
+            color: #ffffff;
+            background-color: #dd302b;
+            font-weight: 400;
+            padding: 1px 5px;
+        }
+
+        .section-1 {
+            height: 100%;
+            background-color: #202020;
+            color: #cfc6b8;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+        }
+        .section-1 .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+        }
+
+        .section-1 .text-content {
+            flex: 1;
+            position: relative;
+            background: transparent;
+        }
+        .section-1 .header {
+            margin: auto;
+            max-width: 80%;
+            text-align: center;
+            font-weight: 300;
+            font-size: 5em;
+            font-family: "Playfair Display", serif;
+        }
+        .section-1 .text-content .text-content-layer2 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+        }
+        .section-1 .menu {
+            margin: auto;
+            max-width: 70%;
+            color: #dd302b;
+            font-style: italic;
+            text-align: center;
+            font-weight: 200;
+            font-size: 1.5em;
+        }
+        .section-1 .menu ul {
+          padding: 0;
+          margin: 0
+        }
+        .section-1 .menu li {
+          display: inline;
+          list-style-type: none;
+          padding: 0 10px;
+        }
+        .section-1 .image-content {
+          flex: 1;
+          position: relative;
+          overflow: hidden;
+          background: transparent;
+        }
+
+        .section-1 .image-content img {
+            position: absolute;
+            height: 100%;
+            width: auto;
+            right: 10%;
+        }
+
+        .section-2, .section-3 {
+          background-color: #f0f0f0;
+          position: relative;
+        }
+
+        .section-2 .story {
+          margin: auto;
+          max-width: 750px;
+          padding: 20px;
+          position: relative;
+          display: flex;
+        }
+
+        .section-2 .story:nth-child(odd) {
+          flex-direction: row;
+        }
+
+        .section-2 .story:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+
+        .section-2 .text-content {
+          flex: 1;
+          padding: 20px;
+        }
+
+        .section-2 .text-content .image {
+            display: none;
+        }
+
+        .section-2 .title {
+          font-family: "Qwitcher Grypen", cursive;
+          font-size: 4em;
+          color: #dd302b;
+        }
+
+        .section-2 .image-side-content {
+          flex: 1;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .section-2 .story .image-side-content img {
+          position: absolute;
+          top: 50%;
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+        }
+
+        .section-2 .story:nth-child(odd) .image-side-content img {
+          left: 0;
+          transform: rotate(15deg) translateY(-50%);
+        }
+
+        .section-2 .story:nth-child(even) .image-side-content img {
+          right: 0;
+          transform: rotate(-15deg) translateY(-50%);
+        }
+        .section-3 {
+          margin-top: 90px;
+          background-color: #202020;
+          color: #cfc6b8;
+          padding: 90px 0 50px;
+        }
+        .section-3 .wrapper {
+            margin: auto;
+            max-width: 750px;
+            position: relative;
+            line-height: 2;
+            font-size: 20px;
+            padding: 5px 20px;
+        }
+        .section-3 .header {
+            font-family: "Playfair Display", serif;
+            font-size: 2em;
+            font-weight: 300;
+            color: #ffffff;
+            text-align: center;
+            max-width: 50%;
+            border: 2px solid #dd302b;
+            border-radius: 10px;
+            background: #dd302b;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px 100px;
+        }
+        .map-link {
+            color: inherit;
+            text-decoration: underline;
+        }
+        .map-link:hover {
+            color: inherit:
+            text-decoration: underline;
+        }
+        .map-link:visited {
+            color: inherit;
+            text-decoration: underline;
+        }
+        .google-map {
+             padding-bottom: 50%;
+             position: relative;
+        }
+
+        .google-map iframe {
+             height: 100%;
+             width: 100%;
+             left: 0;
+             top: 0;
+             position: absolute;
+        }
+        .qa-wrapper {
+            display: flex;
+            margin-top: 30px;
+        }
+        .qa-sidebar {
+            flex: 1;
+            padding-bottom: 20px;
+        }
+        .qa-sidebar .qa-header {
+            font-family: "Playfair Display", serif;
+            font-size: 2em
+        }
+        .qa-sidebar .separator {
+            max-width: 30%;
+            border-bottom: 2px solid #cfc6b8;
+        }
+        .qa-sidebar .more-info {
+            margin-top: 20px;
+            line-height: 1;
+            font-size: 0.75em;
+        }
+        .qa-sidebar .more-info a {
+            color: #dd302b;
+            text-decoration: none;
+        }
+        .qa-sidebar .more-info a:hover {
+            color: #dd302b;
+            text-decoration: underline;
+        }
+        .qa-sidebar .more-info a:visited {
+            color: #dd302b;
+            text-decoration: none;
+        }
+        .qa-content {
+            flex: 2;
+        }
+        .qa-block {
+            padding: 10px;
+            border-bottom: 1px solid #cfc6b8;
+        }
+        .qa-block > summary {
+            cursor: pointer;
+            font-style: italic;
+        }
+        .qa-block > summary::marker {
+            font-size: 0.75em;
+        }
+        .qa-block > summary::-webkit-details-marker {
+            font-size: 0.75em;
+        }
+        .qa-answer {
+            line-height: 1.5;
+            padding: 15px 0 10px;
+        }
+        .section-footer {
+            background: #191919;
+            color: #cfc6b8;
+            font-family: "Qwitcher Grypen", cursive;
+            font-size: 2em;
+        }
+        .section-footer .thank-you {
+            text-align: center;
+            padding: 20px;
+            font-size: 2em;
+        }
+
+        @media (max-width: 1280px) and (orientation: portrait) {
+            .section-1 {
+                height: 50%
+            }
+            .section-1 .header {
+                font-size: 3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+            }
+            .section-1 {
+                height: 100vh;
+                flex-direction: column-reverse;
+            }
+            .section-1 .header {
+                font-size: 2.5em;
+            }
+            .section-1 .menu {
+                max-width: 80%;
+            }
+
+            .section-1 .image-content {
+                flex: 4;
+            }
+            .section-1 .text-content {
+                flex: 3;
+            }
+            .section-1 .image-content img {
+                position: absolute;
+                height: auto;
+                width: 100%;
+                right: auto;
+            }
+            .section-2 .image-side-content {
+                display: none;
+            }
+            .section-2 .story {
+                padding: 0;
+            }
+            .section-2 .text-content {
+                padding: 5px 20px;
+            }
+            .section-2 .text-content .image {
+                display: inline;
+            }
+            .section-2 .text-content .image img {
+                width: 100%;
+                height: auto;
+            }
+            .section-3 {
+              margin-top: 50px;
+              padding: 50px 0px 20px;
+            }
+            .section-3 .header {
+              font-size: 1.5em;
+              padding: 10px 30px;
+            }
+            .section-3 .wrapper {
+              line-height: 1.5;
+              font-size: 16px;
+            }
+            .highlight {
+              padding: 0 5px;
+            }
+            .qa-wrapper {
+              flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="section-1">
+      <img src="/assets/camtu/tree-dec.svg" class="background-image">
+      <div class="image-content">
+        <img src="/assets/camtu/PNA_2007.jpg" alt="Couple Image">
+      </div>
+      <div class="text-content">
+        <div class="text-content-layer2">
+          <div class="header">Trung Đức&nbsp;</div>
+          <div class="header">&nbsp;&nbsp;&nbsp;& Cẩm Tú</div>
+          <div class="menu">Về một nhà</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-2">
+        <img src="/assets/camtu/specks.svg" alt="Couple Image 1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1">
+        <div class="story">
+          <div class="text-content">
+            <div class="title">Làm quen</div>
+            <div class="image">
+              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+            </div>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur rhoncus tristique. Suspendisse et nunc nec purus imperdiet aliquam. Etiam tincidunt sodales ex, sit amet porttitor elit maximus vel. Phasellus dictum magna sed eros dictum lacinia. Sed pretium felis ligula, sit amet ullamcorper leo posuere ac. Donec elementum sem et ante pretium blandit. Aenean volutpat mi sit amet quam pretium finibus. Quisque tellus augue, imperdiet vel consectetur a, venenatis a turpis. Integer quis lectus nec eros condimentum sollicitudin. Sed eu ornare nulla, a malesuada ligula. Etiam a lacus sed tellus facilisis iaculis nec vestibulum metus.</div>
+          </div>
+          <div class="image-side-content">
+            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+          </div>
+        </div>
+        <div class="story">
+          <div class="text-content">
+            <div class="title">Làm quen</div>
+            <div class="image">
+              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+            </div>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur rhoncus tristique. Suspendisse et nunc nec purus imperdiet aliquam. Etiam tincidunt sodales ex, sit amet porttitor elit maximus vel. Phasellus dictum magna sed eros dictum lacinia. Sed pretium felis ligula, sit amet ullamcorper leo posuere ac. Donec elementum sem et ante pretium blandit. Aenean volutpat mi sit amet quam pretium finibus. Quisque tellus augue, imperdiet vel consectetur a, venenatis a turpis. Integer quis lectus nec eros condimentum sollicitudin. Sed eu ornare nulla, a malesuada ligula. Etiam a lacus sed tellus facilisis iaculis nec vestibulum metus.</div>
+          </div>
+          <div class="image-side-content">
+            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+          </div>
+        </div>
+        <div class="story">
+          <div class="text-content">
+            <div class="title">Làm quen</div>
+            <div class="image">
+              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+            </div>
+            <div class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris consectetur rhoncus tristique. Suspendisse et nunc nec purus imperdiet aliquam. Etiam tincidunt sodales ex, sit amet porttitor elit maximus vel. Phasellus dictum magna sed eros dictum lacinia. Sed pretium felis ligula, sit amet ullamcorper leo posuere ac. Donec elementum sem et ante pretium blandit. Aenean volutpat mi sit amet quam pretium finibus. Quisque tellus augue, imperdiet vel consectetur a, venenatis a turpis. Integer quis lectus nec eros condimentum sollicitudin. Sed eu ornare nulla, a malesuada ligula. Etiam a lacus sed tellus facilisis iaculis nec vestibulum metus.</div>
+          </div>
+          <div class="image-side-content">
+            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
+          </div>
+        </div>
+    </div>
+    <div class="section-3">
+      <div class="header">Lễ cưới</div>
+      <div class="wrapper">
+        <div class="content">Thân mời mọi người tham dự lễ cưới của bọn mình vào <span class="highlight red">10h sáng Chủ Nhật 24/11/2024</span>, tại <span class="highlight red">La Bodega, số 56 ngách 56/139 Phố Thạch Cầu, Long Biên, Hà Nội</span>.</div>
+        <div class="content"><a class="map-link" href="https://maps.app.goo.gl/BMEjUzSDfYDj53Hd8" target="_blank">Link Google Map</a>.</div>
+        <div class="content google-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.840360325275!2d105.87224107257572!3d21.024256051612465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abe1eaca6771%3A0xd39f8bbcf2b7defc!2sLa%20Bodega%20Restaurant!5e0!3m2!1sen!2s!4v1728230018464!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="content qa-wrapper">
+            <div class="qa-sidebar">
+                <div class="qa-header">Q&A</div>
+                <div class="separator"></div>
+                <div class="more-info">Nếu còn câu hỏi, xin liên hệ: <a href="mailto:trungduc1992@gmail.com" target="_blank" rel="noopener">trungduc1992@gmail.com</a></div>
+            </div>
+            <div class="qa-content">
+                <details class="qa-block">
+                    <summary>Có thể dẫn trẻ em tới lễ cưới được không?</summary>
+                    <div class="qa-answer">Có. Xin thông báo trước cho cô dâu hoặc chú rể nếu cần ghế trẻ em.</div>
+                </details>
+                <details class="qa-block">
+                    <summary>Lễ cưới có yêu cầu dress code không?</summary>
+                    <div class="qa-answer">Lễ cưới không yêu cầu dress code. Vì lễ được tổ chức vào mùa đông nên nhớ mặc quần áo dài.</div>
+                </details>
+                <details class="qa-block">
+                    <summary>Nhà hàng có khu vực để xe ô tô và xe máy không?</summary>
+                    <div class="qa-answer">Nhà hàng có sân rộng để để ô tô và xe máy.</div>
+                </details>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-footer">
+      <div class="thank-you">Cảm ơn</div>
+    </div>
+</body>
+</html>
+
