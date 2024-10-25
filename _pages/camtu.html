@@ -16,7 +16,7 @@ permalink: /camtu/
             margin: 0;
             padding: 0;
             height: 100%;
-            background-color: #f0f0f0;
+            background-color: #FFF5EE;
             font-size: 18px;
         }
 
@@ -29,7 +29,7 @@ permalink: /camtu/
 
         .section-1 {
             height: 100%;
-            background-color: #202020;
+            background-color: #1D1919;
             color: #cfc6b8;
             display: flex;
             flex-direction: row;
@@ -97,7 +97,7 @@ permalink: /camtu/
         }
 
         .section-2, .section-3 {
-          background-color: #f0f0f0;
+          background-color: #FFF5EE;
           position: relative;
         }
 
@@ -155,19 +155,13 @@ permalink: /camtu/
           right: 0;
           transform: rotate(-15deg) translateY(-50%);
         }
-        .section-3 {
-          margin-top: 90px;
-          background-color: #202020;
-          color: #cfc6b8;
-          padding: 90px 0 50px;
-        }
         .section-3 .wrapper {
             margin: auto;
-            max-width: 750px;
             position: relative;
+            max-width: 1200px;
             line-height: 2;
             font-size: 20px;
-            padding: 5px 20px;
+            padding: 5px 20px 15px;
         }
         .section-3 .header {
             font-family: "Playfair Display", serif;
@@ -198,20 +192,36 @@ permalink: /camtu/
             text-decoration: underline;
         }
         .google-map {
-             padding-bottom: 50%;
-             position: relative;
+            padding-bottom: 50%;
+            position: relative;
         }
 
         .google-map iframe {
-             height: 100%;
-             width: 100%;
-             left: 0;
-             top: 0;
-             position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+        }
+        .google-form {
+            padding-bottom: 50%;
+            position: relative;
+        }
+        .google-form iframe {
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            position: absolute;
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        .google-form iframe::-webkit-scrollbar {
+            display: none;
         }
         .qa-wrapper {
             display: flex;
-            margin-top: 30px;
+            margin: 50px auto;
         }
         .qa-sidebar {
             flex: 1;
@@ -264,7 +274,7 @@ permalink: /camtu/
             padding: 15px 0 10px;
         }
         .section-footer {
-            background: #191919;
+            background: #1D1919;
             color: #cfc6b8;
             font-family: "Qwitcher Grypen", cursive;
             font-size: 2em;
@@ -327,10 +337,6 @@ permalink: /camtu/
                 width: 100%;
                 height: auto;
             }
-            .section-3 {
-              margin-top: 50px;
-              padding: 50px 0px 20px;
-            }
             .section-3 .header {
               font-size: 1.5em;
               padding: 10px 30px;
@@ -344,6 +350,188 @@ permalink: /camtu/
             }
             .qa-wrapper {
               flex-direction: column;
+            }
+        }
+
+        .wedding-details {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .detail-box {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .detail-box:first-child::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 1px;
+            background-color: #dd302b;
+        }
+
+        .detail-title {
+            font-family: "Playfair Display", serif;
+            font-size: 1.5em;
+            color: #dd302b;
+            margin-bottom: 15px;
+        }
+
+        .detail-content {
+            font-family: "Crimson Text", serif;
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #202020;
+            padding-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .wedding-details {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            .detail-content {
+              padding-bottom: 0;
+            }
+
+            .detail-box:first-child::after {
+                display: none;
+            }
+
+            .detail-box {
+                padding: 10px;
+            }
+        }
+        .rsvp-section {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .rsvp-form {
+            background: #FFFAFA;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .rsvp-title {
+            font-family: "Playfair Display", serif;
+            font-size: 2em;
+            color: #dd302b;
+            text-align: center;
+        }
+        .rsvp-deadline {
+          text-align: center;
+          color: #202020;
+          font-family: "Crimson Text", serif;
+          margin-bottom: 2rem;
+          font-style: italic;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #202020;
+            font-family: "Crimson Text", serif;
+        }
+
+        .form-group input[type='text'],
+        .form-group input[type='tel'],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cfc6b8;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: "Crimson Text", serif;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .additional-fields {
+            display: none;
+        }
+
+        .additional-fields.show {
+            display: block;
+        }
+
+        .rsvp-form button {
+            width: 100%;
+            padding: 12px;
+            background-color: #dd302b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: "Crimson Text", serif;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .rsvp-form button:hover {
+            background-color: #c62a26;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            color: #dd302b;
+            font-size: 1.2em;
+            font-family: "Playfair Display", serif;
+        }
+
+        .error-message {
+            display: none;
+            color: #dd302b;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border-radius: 4px;
+            background-color: rgba(221, 48, 43, 0.1);
+            font-family: "Crimson Text", serif;
+        }
+
+        .hidden-iframe {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .rsvp-section {
+                margin: 1rem auto;
+            }
+            
+            .rsvp-form {
+                padding: 1.5rem;
+            }
+
+            .radio-group {
+                flex-direction: column;
+                gap: 0rem;
             }
         }
     </style>
@@ -362,99 +550,79 @@ permalink: /camtu/
         </div>
       </div>
     </div>
-    <div class="section-2">
-        <img src="/assets/camtu/specks.svg" alt="Couple Image 1" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.1">
-        <div class="story">
-          <div class="text-content">
-            <div class="title">08/2020</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">Đức “tình cờ” chọn thuê trọ cùng căn nhà với Tú :)</br>Chắc không phải là do gặp Tú ở nhà hôm xem trọ đâu</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            <div class="title">11/2020</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">Hợp đồng nhà 3 tháng kết thúc, vừa kịp lúc Đức có người yêu và còn rủ đi thuê nhà khác cùng. Chắc là không tính toán gì đâu.</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            <div class="title">...</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">Đức đưa Tú đi ăn ở những quán ngon. Tú chỉ Đức đi ăn ở những quán đắt tiền</br>Chúng mình đồng hành trên những chuyến đi lên rừng và lên rừng, mãi không thấy đi biển.</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            <div class="title">12/2022</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">Đức cầu hôn Tú tại 1 nhà hàng nhỏ xinh tại Hà Nội. Mặc dù đi chơi Hàn Quốc 2 tuần, đi cả lễ  hội pháo hoa mà lại không cầu hôn. </br>Chắc không phải tại tiệm nhẫn trả hàng chậm đâu.</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            <div class="title">06/2023</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">2 đứa mình đưa nhau lên phường ký giấy Đăng ký kết hôn cho kịp...</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            <div class="title">07/2023</div>
-            <div class="image">
-              <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-            </div>
-            <div class="content">Bubezi ra đời !!!</div>
-          </div>
-          <div class="image-side-content">
-            <img src="/assets/camtu/PNA_2007.jpg" alt="TODO Image 1">
-          </div>
-        </div>
-        <div class="story">
-          <div class="text-content">
-            Và cuối cùng ngày này đã đến,</br>
-            15 tháng sau khi em bé được sinh ra...</br>
-            16 tháng sau khi được luật pháp công nhận...</br>
-            23 tháng đeo nhẫn cầu hôn...</br>
-
-            Chúng mình có một chiếc đám cưới nhỏ xinh với những người thân nhất trong gia đình và bạn bè đồng nghiệp.
-          </div>
-        </div>
-    </div>
     <div class="section-3">
-      <div class="header">Lễ cưới</div>
       <div class="wrapper">
-        <div class="content">Thân mời mọi người tham dự lễ cưới của bọn mình vào <span class="highlight red">10h sáng Chủ Nhật 24/11/2024</span>, tại <span class="highlight red">La Bodega, số 56 ngách 56/139 Phố Thạch Cầu, Long Biên, Hà Nội</span>.</div>
-        <div class="content"><a class="map-link" href="https://maps.app.goo.gl/BMEjUzSDfYDj53Hd8" target="_blank">Link Google Map</a>.</div>
-        <div class="content google-map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3045.840360325275!2d105.87224107257572!3d21.024256051612465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abe1eaca6771%3A0xd39f8bbcf2b7defc!2sLa%20Bodega%20Restaurant!5e0!3m2!1sen!2s!4v1728230018464!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="wedding-details">
+            <div class="detail-box">
+                <div class="detail-title">Thời gian</div>
+                <div class="detail-content">
+                  Chủ nhật, 24 tháng 11 năm 2024<br>
+                    (10h sáng)
+                </div>
+            </div>
+            <div class="detail-box">
+                <div class="detail-title">Địa điểm</div>
+                <div class="detail-content">
+                  Nhà hàng La Bodega<br>
+                  Số 56 ngách 56/139 Phố Thạch Cầu, Long Biên, Hà Nội (<a class="map-link" href="https://maps.app.goo.gl/BMEjUzSDfYDj53Hd8" target="_blank">map</a>)
+                </div>
+            </div>
         </div>
+
+        <div class="rsvp-section">
+            <iframe name="hidden_iframe" id="hidden_iframe" class="hidden-iframe"></iframe>
+            <form class="rsvp-form" id="rsvpForm" action="https://docs.google.com/forms/d/e/1FAIpQLSd2gORGbsShtPjosrMDWaSa7yZQBwhRNbvnHesl-qVY_xa-5w/formResponse" method="POST" target="hidden_iframe">
+                <div class="rsvp-title">RSVP</div>
+                <div class="rsvp-deadline">Vui lòng xác nhận trước ngày 5 tháng 11 để bọn mình có thể chuẩn bị một cách chu đáo nhé!</div>
+                
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage">
+                  <img src="/assets/camtu/resized_cropped_banner_v1.jpg" alt="Couple Image" width="100%">
+                    Cảm ơn bạn đã thông báo!
+                </div>
+
+                <div id="formContent">
+                    <div class="form-group">
+                        <label for="name">Họ tên *:</label>
+                        <input type="text" id="name" name="entry.326059954" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Số điện thoại:</label>
+                        <input type="tel" id="tel" name="entry.66545916">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Bạn có tham dự được không? *</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="entry.188607237" value="Có" required>
+                                Có
+                            </label>
+                            <label>
+                                <input type="radio" name="entry.188607237" value="Không">
+                                Rất tiếc không thể tham dự
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="additional-fields" id="additionalFields">
+                        <div class="form-group">
+                            <label for="guests">Bạn có người đính kèm không?</label>
+                            <input type="text" id="guests" name="entry.314717481" placeholder="(nếu có thì cho chúng mình biết số lượng người đính kèm nhé)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dietary">Note khác:</label>
+                            <textarea id="dietary" name="entry.527206191" rows="3" placeholder="(cần ghế trẻ em, đồ ăn chay, bài hát yêu cầu, vv...)"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit">Gửi RSVP</button>
+                </div>
+            </form>
+        </div>
+
         <div class="content qa-wrapper">
             <div class="qa-sidebar">
                 <div class="qa-header">Q&A</div>
@@ -464,7 +632,7 @@ permalink: /camtu/
             <div class="qa-content">
                 <details class="qa-block">
                     <summary>Có thể dẫn trẻ em tới lễ cưới được không?</summary>
-                    <div class="qa-answer">Có. Xin thông báo trước cho cô dâu hoặc chú rể nếu cần ghế trẻ em.</div>
+                    <div class="qa-answer">Có. Xin thông báo trước cho cô dâu hoặc chú rể nếu bạn cần ghế trẻ em.</div>
                 </details>
                 <details class="qa-block">
                     <summary>Lễ cưới có yêu cầu dress code không?</summary>
@@ -476,11 +644,56 @@ permalink: /camtu/
                 </details>
             </div>
         </div>
+        
       </div>
     </div>
     <div class="section-footer">
       <div class="thank-you">Cảm ơn</div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('rsvpForm');
+            const formContent = document.getElementById('formContent');
+            const additionalFields = document.getElementById('additionalFields');
+            const errorMessage = document.getElementById('errorMessage');
+            const successMessage = document.getElementById('successMessage');
+            const iframe = document.getElementById('hidden_iframe');
+
+            // Show/hide additional fields based on attendance
+            form.querySelectorAll('input[name="entry.188607237"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    if (e.target.value === 'Có') {
+                        additionalFields.classList.add('show');
+                    } else {
+                        additionalFields.classList.remove('show');
+                    }
+                });
+            });
+
+            // Handle form submission
+            form.addEventListener('submit', function(e) {
+                // Reset messages
+                errorMessage.style.display = 'none';
+                successMessage.style.display = 'none';
+
+                // Basic validation
+                const name = form.querySelector('#name').value;
+                const attending = form.querySelector('input[name="entry.188607237"]:checked')?.value;
+
+                if (!name || !attending) {
+                    e.preventDefault();
+                    errorMessage.textContent = 'Vui lòng điền các trường bắt buộc.';
+                    errorMessage.style.display = 'block';
+                    return;
+                }
+
+                // Hide form and show success message after short delay
+                setTimeout(() => {
+                    formContent.style.display = 'none';
+                    successMessage.style.display = 'block';
+                }, 500);
+            });
+        });
+    </script>
 </body>
 </html>
-
