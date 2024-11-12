@@ -312,7 +312,7 @@ permalink: /camtu/
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             body {
                 font-size: 16px;
             }
@@ -412,7 +412,7 @@ permalink: /camtu/
             padding-bottom: 15px;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .wedding-details {
                 flex-direction: column;
                 gap: 20px;
@@ -538,7 +538,7 @@ permalink: /camtu/
             display: none;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 767px) {
             .rsvp-section {
                 margin: 1rem auto;
             }
@@ -552,6 +552,93 @@ permalink: /camtu/
                 gap: 0rem;
             }
         }
+
+        .image-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .side-image {
+            max-width: 45%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        .centered-text {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 767px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .side-image {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .side-image:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .scroll-button {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            background-color: #dd302b;
+            color: #ffffff;
+            border: none;
+            border-radius: 25px;
+            font-family: "Crimson Text", serif;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .scroll-button:hover {
+            background-color: #b32622;
+            transform: translateX(-50%) translateY(-2px);
+        }
+
+        .scroll-button svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .scroll-button:hover svg {
+            transform: translateY(3px);
+        }
+
+        @media (max-width: 767px) {
+            .scroll-button {
+                font-size: 0.9em;
+                padding: 12px 24px;
+                bottom: 30px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -567,8 +654,64 @@ permalink: /camtu/
           <div class="menu">Về một nhà</div>
         </div>
       </div>
+      <button class="scroll-button" onclick="scrollToSection()">
+      Thông tin buổi lễ và RSVP
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
     </div>
     <div class="section-3">
+      <div class="wrapper">
+        <h1 style="color: #dd302b; text-align: center; font-style: italic; text-decoration: overline">Câu chuyện</h1>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-toddlers-duc.png" class="side-image">
+                <img src="/assets/camtu/story-toddlers-tu.png" class="side-image">
+            </div>
+            <p class="centered-text">Đức và Tú đều lớn lên ở Hà Nội, nhưng giữa chúng mình lại không có bất kỳ mối quan hệ nào. Mặc dù có hơn 1000 bạn bè trên mạng xã hội, nhưng 2 người lại không có một người bạn chung nào. Cứ như thể những con đường song song không có cơ hội để giao nhau.</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-meet.jpg" class="side-image">
+            </div>
+            <p class="centered-text">Vào ngày sinh nhật 26 tuổi, Tú quyết định thuê một căn gác xép nhỏ trên phố Hoàng Hoa Thám, chỉ để tìm kiếm không gian riêng và tận hưởng cuộc sống độc thân. Hai tháng sau, tình cờ Đức cũng chuyển đến sống ở tầng 3 của cùng một căn nhà.</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-play.jpg" class="side-image">
+            </div>
+            <p class="centered-text">Lửa gần rơm lâu ngày cũng bén, Tú nhanh chóng bị Đức chinh phục bởi bữa Nầm bò nướng, chiếc mèo tên Sim và một sự thông minh đáng nể.</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-live-1.jpg" class="side-image">
+                <img src="/assets/camtu/story-live-2.jpg" class="side-image">
+            </div>
+            <p class="centered-text">Chúng mình cùng nhau trải qua thời gian cách ly xã hôị mùa dịch, cùng nhau đi du lịch, chăm sóc 2 đứa con riêng. Đức giới thiệu cho Tú về ngành IT còn Tú dẫn Đức đến thế giới ẩm thực.</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-bubezi-1.jpg" class="side-image">
+                <img src="/assets/camtu/story-bubezi-2.jpg" class="side-image">
+            </div>
+            <p class="centered-text">2023 chúng mình đón em bé Bubezi đến với gia đình nhỏ.</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-engagement.jpg" class="side-image">
+            </div>
+            <p class="centered-text">25/12/2022 - tại nhà hàng Le Gout de Gia...</p>
+        </div>
+        <div class="image-section">
+            <div class="image-container">
+                <img src="/assets/camtu/story-family.jpg" class="side-image">
+            </div>
+            <p class="centered-text">Sau thời gian dài trì hoãn để sinh và chăm sóc em bé, chúng mình đã quyết định có một đám cưới với chỉ những người bạn thân thiết.</p>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div id="wedding-info" class="section-3">
       <div class="wrapper">
         <div class="wedding-details">
             <div class="detail-box">
@@ -662,7 +805,6 @@ permalink: /camtu/
                 </details>
             </div>
         </div>
-        
       </div>
     </div>
     <div class="section-footer">
@@ -712,6 +854,14 @@ permalink: /camtu/
                 }, 500);
             });
         });
+        function scrollToSection() {
+            const section = document.querySelector('#wedding-info');
+            if (section) {
+                section.scrollIntoView({ 
+                    behavior: 'smooth'
+                });
+            }
+        }
     </script>
 </body>
 </html>
